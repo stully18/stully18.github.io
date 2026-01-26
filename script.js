@@ -125,6 +125,8 @@ Software Engineer | CS @ Rider University '27
 Type <span class="prompt">'help'</span> to explore.</span>`;
 
     // Type text with animation
+    const terminalBody = document.querySelector('.terminal-body');
+
     function typeText(text, element, speed = 15) {
         return new Promise((resolve) => {
             let i = 0;
@@ -139,8 +141,8 @@ Type <span class="prompt">'help'</span> to explore.</span>`;
                         element.innerHTML += text[i];
                         i++;
                     }
-                    // Auto-scroll
-                    element.parentElement.scrollTop = element.parentElement.scrollHeight;
+                    // Auto-scroll to bottom
+                    terminalBody.scrollTop = terminalBody.scrollHeight;
                 } else {
                     clearInterval(interval);
                     resolve();
@@ -187,7 +189,6 @@ Type <span class="prompt">'help'</span> for available commands.`;
         }
 
         // Scroll to bottom
-        const terminalBody = document.querySelector('.terminal-body');
         terminalBody.scrollTop = terminalBody.scrollHeight;
 
         // Clear input
