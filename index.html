@@ -27,7 +27,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="assets/ShaneTully_Resume.pdf" target="_blank" class="nav-resume-btn">Resume</a></li>
+            <li><a href="assets/Shane_Tully_Resume.pdf" target="_blank" class="nav-resume-btn">Resume</a></li>
         </ul>
         <div class="burger">
             <div class="line1"></div>
@@ -37,15 +37,40 @@
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="typewriter-text">Hi I am Shane, <span class="highlight">a software engineer.</span></h1>
-            <p class="subtitle">Computer Science Student at Rider University</p>
-            
-            <div class="hero-buttons">
-                <a href="#projects" class="btn">View My Work</a>
-                <a href="assets/ShaneTully_Resume.pdf" target="_blank" class="btn-outline">Download Resume</a>
+        <div class="terminal-wrapper">
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="terminal-btn red"></span>
+                        <span class="terminal-btn yellow"></span>
+                        <span class="terminal-btn green"></span>
+                    </div>
+                    <div class="terminal-title">shane@portfolio</div>
+                </div>
+                <div class="terminal-body">
+                    <div id="terminal-output"></div>
+                    <div class="terminal-input-line">
+                        <span class="prompt">$</span>
+                        <input type="text" id="terminal-input" aria-label="Terminal command input" autocomplete="off" autofocus>
+                        <span class="cursor">|</span>
+                    </div>
+                </div>
+            </div>
+            <div class="command-hints">
+                <button class="hint-btn" data-cmd="help">help</button>
+                <button class="hint-btn" data-cmd="about">about</button>
+                <button class="hint-btn" data-cmd="skills">skills</button>
+                <button class="hint-btn" data-cmd="projects">projects</button>
+                <button class="hint-btn" data-cmd="contact">contact</button>
             </div>
         </div>
+        <noscript>
+            <div class="hero-fallback">
+                <h1>Shane Tully</h1>
+                <p>Software Engineer | CS @ Rider University '27</p>
+                <a href="#projects" class="btn">View Projects</a>
+            </div>
+        </noscript>
     </section>
 
     <section id="about" class="section">
@@ -65,13 +90,17 @@
                 
                 <div class="skills-grid">
                     <span class="skill-tag">Python</span>
+                    <span class="skill-tag">TypeScript</span>
                     <span class="skill-tag">Java</span>
-                    <span class="skill-tag">HTML & CSS</span>
-                    <span class="skill-tag">Flask</span>
-                    <span class="skill-tag">Pandas</span>
                     <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Flask</span>
+                    <span class="skill-tag">FastAPI</span>
+                    <span class="skill-tag">Next.js</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Pandas</span>
                     <span class="skill-tag">Git</span>
                     <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">Supabase</span>
                 </div>
 
                 <div class="timeline">
@@ -117,7 +146,19 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <div class="project-grid">
-                
+
+                <div class="project-card">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Net Worth Optimizer</h3>
+                    <p>
+                        Full-stack financial planning app helping students decide between paying off debt or investing.
+                        Features risk-adjusted portfolios, visual projections, and ETF recommendations.
+                    </p>
+                    <div class="card-links">
+                        <a href="https://github.com/stully18/net-worth-optimizer" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+
                 <div class="project-card">
                     <div class="card-icon"><i class="fas fa-shield-virus"></i></div>
                     <h3>AI Malware Detection</h3>
@@ -162,7 +203,7 @@
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <p>I'm currently open to internships and new opportunities.</p>
-            <a href="mailto:stullyrl@gmail.com" class="btn-outline">Say Hello</a>
+            <a href="mailto:tullys@rider.edu" class="btn-outline">Say Hello</a>
             <div class="socials">
                 <a href="https://github.com/stully18" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/shane-tully-swe/" target="_blank"><i class="fab fa-linkedin"></i></a> 

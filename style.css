@@ -99,7 +99,7 @@ ul { list-style: none; }
 }
 
 /* =========================================
-   3. HERO SECTION
+   3. HERO SECTION & TERMINAL
    ========================================= */
 .hero {
     height: 100vh;
@@ -110,6 +110,173 @@ ul { list-style: none; }
     padding: 0 20px;
 }
 
+.terminal-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.terminal {
+    width: 100%;
+    background: #0d0d0d;
+    border-radius: 8px;
+    border: 1px solid #333;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.terminal:hover {
+    border-color: var(--accent);
+    box-shadow: 0 10px 40px rgba(100, 255, 218, 0.1);
+}
+
+.terminal-header {
+    background: #1a1a1a;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.terminal-btn.red { background: #ff5f56; }
+.terminal-btn.yellow { background: #ffbd2e; }
+.terminal-btn.green { background: #27ca40; }
+
+.terminal-title {
+    flex: 1;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+}
+
+.terminal-body {
+    padding: 20px;
+    height: 350px;
+    overflow-y: auto;
+    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+#terminal-output {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#terminal-output .command-line {
+    color: var(--text-primary);
+}
+
+#terminal-output .prompt {
+    color: var(--accent);
+}
+
+#terminal-output .output {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    display: block;
+}
+
+#terminal-output .output a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+#terminal-output .output a:hover {
+    text-decoration: underline;
+}
+
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.terminal-input-line .prompt {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+#terminal-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-size: 0.95rem;
+    caret-color: transparent;
+}
+
+.cursor {
+    color: var(--accent);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.command-hints {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hint-btn {
+    background: var(--card-bg);
+    border: 1px solid #333;
+    color: var(--accent);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hint-btn:hover {
+    border-color: var(--accent);
+    background: rgba(100, 255, 218, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Fallback for no JS */
+.hero-fallback {
+    text-align: center;
+}
+
+.hero-fallback h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-fallback p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Legacy styles kept for compatibility */
 .hero-content {
     display: flex;
     flex-direction: column;
@@ -117,18 +284,18 @@ ul { list-style: none; }
     max-width: 800px;
 }
 
-.typewriter-text { 
-    font-size: 3.5rem; 
-    margin-bottom: 1rem; 
+.typewriter-text {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
     line-height: 1.2;
 }
 
 .highlight { color: var(--accent); }
 
-.subtitle { 
-    color: var(--text-secondary); 
-    font-size: 1.3rem; 
-    margin-bottom: 2.5rem; 
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
 }
 
 /* Hero Buttons Container */
@@ -396,7 +563,25 @@ ul { list-style: none; }
 @media (max-width: 768px) {
     .typewriter-text { font-size: 2.2rem; }
     .section { padding: 4rem 5%; }
-    
+
+    .terminal-body {
+        height: 280px;
+        font-size: 0.85rem;
+    }
+
+    .terminal-wrapper {
+        padding: 0 10px;
+    }
+
+    .command-hints {
+        gap: 8px;
+    }
+
+    .hint-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
     .nav-links {
         position: absolute;
         right: 0px;
