@@ -31,8 +31,8 @@
             <a href="#home" class="logo">ST<span class="logo-dot">.</span></a>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
                 <li><a href="assets/Shane_Tully_Resume.pdf" target="_blank" rel="noopener" class="nav-resume-btn">Resume</a></li>
@@ -105,6 +105,82 @@
             </div>
         </section>
 
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-label animate-on-scroll">Projects</h2>
+                <div class="project-grid">
+
+                    <article class="project-card animate-on-scroll">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+                            <span class="project-date">Dec 2025 &ndash; Present</span>
+                        </div>
+                        <h3>StackSmart</h3>
+                        <p>Full-stack fintech platform for college students to optimize debt repayment vs. investing. Integrates live S&P 500/ETF market data with 4 financial tools and 30-year wealth projection visualizations.</p>
+                        <ul class="project-bullets">
+                            <li>Secure REST API with FastAPI, Supabase JWT auth, and Row-Level Security on multi-tenant PostgreSQL</li>
+                            <li>Responsive React frontend with dynamic form validation and S&P 500-benchmarked comparisons</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Next.js</span>
+                            <span>TypeScript</span>
+                            <span>FastAPI</span>
+                            <span>Supabase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/stully18/FratFinance" target="_blank" rel="noopener" aria-label="View StackSmart on GitHub"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://stacksmart.dev" target="_blank" rel="noopener" aria-label="View StackSmart live site"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+                            <a href="https://www.linkedin.com/posts/shane-tully-swe_fintech-buildinginpublic-softwaredevelopment-activity-7449516369320062977-JVLv" target="_blank" rel="noopener" aria-label="Watch StackSmart demo video"><i class="fab fa-linkedin"></i> Demo</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card animate-on-scroll">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-shield-virus"></i></div>
+                            <span class="project-date">Jan &ndash; Apr 2025</span>
+                        </div>
+                        <h3>PyTorch Malware Detection</h3>
+                        <p>Deep neural network trained on 200K+ PE executable samples, achieving 96% detection accuracy through hyperparameter tuning and cross-validation.</p>
+                        <ul class="project-bullets">
+                            <li>Feature extraction pipeline parsing 50+ binary attributes, reducing false positives by 40% vs. baseline</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>PyTorch</span>
+                            <span>Scikit-Learn</span>
+                            <span>Pandas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/stully18/MalwareDetectionModel" target="_blank" rel="noopener" aria-label="View Malware Detection on GitHub"><i class="fab fa-github"></i> Code</a>
+                            <a href="malware.html" aria-label="View Malware Detection case study"><i class="fas fa-book-open"></i> Case Study</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card animate-on-scroll">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-microchip"></i></div>
+                            <span class="project-date">Sep &ndash; Dec 2024</span>
+                        </div>
+                        <h3>Multithreading Performance Engine</h3>
+                        <p>Benchmarked concurrent vs. sequential prime computation across 500+ test runs, achieving 73.5% runtime reduction with real-time CPU/memory profiling.</p>
+                        <ul class="project-bullets">
+                            <li>Authored research paper "Beyond Moore's Law" analyzing thread scaling behavior and GIL contention</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Threading</span>
+                            <span>Matplotlib</span>
+                            <span>psutil</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/stully18" target="_blank" rel="noopener" aria-label="View Multithreading Engine on GitHub"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
         <section id="skills" class="section">
             <div class="container">
                 <h2 class="section-label animate-on-scroll">Skills & Technologies</h2>
@@ -168,80 +244,6 @@
                             <span class="skill-tag">Agile/Scrum</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-label animate-on-scroll">Projects</h2>
-                <div class="project-grid">
-
-                    <article class="project-card animate-on-scroll">
-                        <div class="project-header">
-                            <div class="project-icon"><i class="fas fa-chart-line"></i></div>
-                            <span class="project-date">Dec 2025 &ndash; Present</span>
-                        </div>
-                        <h3>Net Worth Optimizer</h3>
-                        <p>Full-stack financial planning app enabling users to model debt payoff vs. investment scenarios with interactive Chart.js dashboards visualizing 30-year net worth projections.</p>
-                        <ul class="project-bullets">
-                            <li>Secure REST API with FastAPI, Supabase JWT auth, and Row-Level Security on multi-tenant PostgreSQL</li>
-                            <li>Responsive React frontend with dynamic form validation and S&P 500-benchmarked comparisons</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>TypeScript</span>
-                            <span>FastAPI</span>
-                            <span>Supabase</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/stully18/FratFinance" target="_blank" rel="noopener" aria-label="View Net Worth Optimizer on GitHub"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </article>
-
-                    <article class="project-card animate-on-scroll">
-                        <div class="project-header">
-                            <div class="project-icon"><i class="fas fa-shield-virus"></i></div>
-                            <span class="project-date">Jan &ndash; Apr 2025</span>
-                        </div>
-                        <h3>PyTorch Malware Detection</h3>
-                        <p>Deep neural network trained on 200K+ PE executable samples, achieving 96% detection accuracy through hyperparameter tuning and cross-validation.</p>
-                        <ul class="project-bullets">
-                            <li>Feature extraction pipeline parsing 50+ binary attributes, reducing false positives by 40% vs. baseline</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>PyTorch</span>
-                            <span>Scikit-Learn</span>
-                            <span>Pandas</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/stully18/MalwareDetectionModel" target="_blank" rel="noopener" aria-label="View Malware Detection on GitHub"><i class="fab fa-github"></i> Code</a>
-                            <a href="malware.html" aria-label="View Malware Detection case study"><i class="fas fa-book-open"></i> Case Study</a>
-                        </div>
-                    </article>
-
-                    <article class="project-card animate-on-scroll">
-                        <div class="project-header">
-                            <div class="project-icon"><i class="fas fa-microchip"></i></div>
-                            <span class="project-date">Sep &ndash; Dec 2024</span>
-                        </div>
-                        <h3>Multithreading Performance Engine</h3>
-                        <p>Benchmarked concurrent vs. sequential prime computation across 500+ test runs, achieving 73.5% runtime reduction with real-time CPU/memory profiling.</p>
-                        <ul class="project-bullets">
-                            <li>Authored research paper "Beyond Moore's Law" analyzing thread scaling behavior and GIL contention</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Threading</span>
-                            <span>Matplotlib</span>
-                            <span>psutil</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/stully18" target="_blank" rel="noopener" aria-label="View Multithreading Engine on GitHub"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </article>
-
                 </div>
             </div>
         </section>
